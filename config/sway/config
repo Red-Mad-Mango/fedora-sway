@@ -11,6 +11,10 @@ set $right l
 set $term foot
 set $file-manager nautilus
 set $browser trivalent
+set $store flatpak run io.github.kolunmi.Bazaar
+set $inkscape flatpak run org.inkscape.Inkscape
+set $flatseal flatpak run com.github.tchx84.Flatseal
+set $password-manager keepassxc
 
 # Screenshot Actions
 #set $scsh grim -g "$(slurp)" - | wl-copy
@@ -22,6 +26,10 @@ set $browser trivalent
 bindsym $mod+Return exec $term
 bindsym $mod+shift+f exec $file-manager --new-window
 bindsym $mod+shift+b exec $browser
+bindsym $mod+shift+s exec $store
+bindsym $mod+shift+i exec $inkscape
+bindsym $mod+shift+p exec $flatseal
+bindsym $mod+shift+d exec $password-manager
 bindsym $mod+q kill
 floating_modifier $mod normal
 bindsym $mod+Shift+r reload
