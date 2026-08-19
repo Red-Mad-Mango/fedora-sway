@@ -1,0 +1,189 @@
+[bar]
+order = [ "default", "Minimal" ]
+
+    [bar.Minimal]
+    center = [ "clipboard", "clock", "media" ]
+    end = [
+        "tray",
+        "notifications",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    margin_edge = 2
+    margin_ends = 200
+    shadow = false
+    thickness = 30
+    widget_spacing = 10
+
+    [bar.default]
+    center = [ "wallpaper", "clock", "clipboard" ]
+    enabled = false
+    end = [
+        "media",
+        "tray",
+        "notifications",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session"
+    ]
+    start = [ "launcher", "workspaces" ]
+
+[battery]
+warning_threshold = 30
+
+[control_center.calendar]
+show_events_card = false
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 24
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[hot_corners]
+enabled = true
+
+    [hot_corners.top_left]
+    action = "control_center"
+
+[location]
+sunset = "06:00"
+
+[lockscreen]
+wallpaper = "/home/jackfruit/Pictures/Wallpapers/Minimal/M16.png"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 1018.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugins]
+auto_update = false
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    enabled = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+font_family = "Google Sans Flex"
+show_location = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    session_placement = "floating"
+    session_position = "top_center"
+    shadow = false
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+    [shell.screenshot]
+    pipe_command = "swappy -f -"
+    pipe_to_command = true
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Paradise"
+custom_palette = "p10-mc"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-fruit-salad"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "kcolorscheme", "qt", "sway" ]
+    community_ids = [ "gimp", "inkscape", "libreoffice", "fastfetch", "zathura", "papirus-icons", "bat" ]
+
+[wallpaper]
+fill_mode = "stretch"
+
+    [wallpaper.default]
+    path = "/home/jackfruit/Pictures/Wallpapers/Minimal/M14.png"
+
+    [wallpaper.last]
+    path = "/home/jackfruit/Pictures/Wallpapers/Minimal/M14.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/jackfruit/Pictures/Wallpapers/Minimal/M14.png"
+
+[weather]
+effects = false
+
+[widget.battery]
+hide_when_plugged = true
+
+[widget.bluetooth]
+enabled = false
+
+[widget.brightness]
+enabled = false
+show_label = false
+
+[widget.control-center]
+icon_color = "primary"
+
+[widget.launcher]
+enabled = false
+
+[widget.media]
+hide_artist = true
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.volume]
+enabled = false
