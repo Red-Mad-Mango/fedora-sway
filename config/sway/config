@@ -88,9 +88,6 @@ bindsym $mod+f fullscreen
 # Reassigned floating window hotkey (since Noctalia uses Mod+space)
 bindsym $mod+space floating toggle
 
-#include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
-#include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
-
 # Launch Noctalia Shell on startup
 exec noctalia
 
@@ -114,3 +111,6 @@ include ~/.config/sway/noctalia
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec hash dbus-update-activation-environment 2>/dev/null && \
   dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
+#polkit-auth agent (mate-auth)
+exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
